@@ -1,0 +1,52 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to #{title}
+    .btn-group
+        button(type='button', id='createWallet') CreateWallet
+        button(type='button', id='getBalance') View Balance
+        button(type='button', id='transaction') Send Money
+        button(type='button', id='addMoney') Add Money
+        script(src='./javascripts/jq.js')
+        script.
+            $(function () {
+                $('#createWallet').click(function (e) {
+                    $.ajax({
+                        type: "post",
+                        url: "/createWallet",
+                        success: function (data) {
+
+                        }
+                    });
+                });
+                $('#getBalance').click(function (e) {
+                    $.ajax({
+                        url: "/getBalance",
+                        success: function (data) {
+
+                        }
+                    });
+                });
+                $('#transaction').click(function (e) {
+                    $.ajax({
+                        type: "post",
+                        url: "/transaction",
+                        success: function (data) {
+
+                        }
+                    });
+                });
+
+
+                $('#addMoney').click(function (e) {
+                    $.ajax({
+                        type: "post",
+                        url: "/addMoney",
+                        success: function (data) {
+
+                        }
+                    });
+                });
+            });
+
