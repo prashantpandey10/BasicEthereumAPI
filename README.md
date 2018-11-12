@@ -29,6 +29,7 @@ What improvements can be done?
 * Port and token configuration can be done via the application.properties file.
 * Better UI but this was just a POC
 * Dockerizing everything
+* Best practices of Node and Express - I am new to this and just wanted to do a POC.
 
 
 
